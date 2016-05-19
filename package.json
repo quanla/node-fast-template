@@ -1,0 +1,9 @@
+{
+  "name": "fast-template",
+  "version": "1.1.0",
+  "description": "QuanLe's fast-template",
+  "main": "fast-template.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {}
+}
