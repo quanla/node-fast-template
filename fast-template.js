@@ -20,7 +20,7 @@ function filteredExpF(exp) {
 
 }
 function expF(exp) {
-    return require("./node_modules/node-common/expression")(exp);
+    return require("node-common/expression")(exp);
 }
 
 function templateRepeatF(exp, content) {
@@ -110,12 +110,14 @@ function applyPortions(context, portions) {
     return Cols.join(Cols.yield(portions, function(portion) { return portion(context); }), "");
 }
 
-module.exports = function(template) {
-    var portions = toPortions(template);
+module.exports = {
+	compile: function(template) {
+		var portions = toPortions(template);
 
-    return {
-        render: function(context) {
-            return applyPortions(context, portions);
-        }
-    };
+		return {
+			render: function(context) {
+				return applyPortions(context, portions);
+			}
+		};
+	}
 };
