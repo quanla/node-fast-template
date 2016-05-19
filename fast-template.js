@@ -20,7 +20,7 @@ function filteredExpF(exp) {
 
 }
 function expF(exp) {
-    return require("./expression")(exp);
+    return require("./node_modules/node-common/expression")(exp);
 }
 
 function templateRepeatF(exp, content) {
