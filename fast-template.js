@@ -1,3 +1,5 @@
+var Cols = require("node-common/common-utils").Cols;
+
 function text(content) {
     return function() { return content; };
 }
